@@ -1,7 +1,7 @@
-import { FeatureFlagsState } from './feature-flags.state';
-import { GETS_FEATURE_FLAGS, GetsFeatureFlags } from '../domain/gets-feature.flags';
-import { TestBed } from '@angular/core/testing';
-import { GetsFeatureFlagsStub } from '../domain/gets-feature-flags.stub';
+import {FeatureFlagsState} from './feature-flags.state';
+import {GETS_FEATURE_FLAGS, GetsFeatureFlags} from '../domain/gets-feature.flags';
+import {TestBed} from '@angular/core/testing';
+import {GetsFeatureFlagsStub} from '../domain/gets-feature-flags.stub';
 
 describe('Feature Flags State', () => {
   let state: FeatureFlagsState;

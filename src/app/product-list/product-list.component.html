@@ -1,0 +1,8 @@
+<h2 [ngClass]="{'bright-color': ['CAN_BUY_PRODUCT'] | hasFeature | async}">Products</h2>
+<mat-list>
+  <mat-list-item *ngFor="let product of products$ | async">
+    <div mat-line>{{product.name}} for {{product.price}}</div>
+    <div mat-line *libFeatureFlags="['CAN_BUY_PRODUCT']"><a mat-raised-button color="primary" [routerLink]="['buy']">Buy</a></div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>

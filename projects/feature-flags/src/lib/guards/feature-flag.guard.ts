@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, UrlTree } from '@angular/router';
-import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, CanActivate, Router, UrlTree} from '@angular/router';
+import {Observable, of} from 'rxjs';
+import {map} from 'rxjs/operators';
 import {FeatureFlagsState} from '../core/application/feature-flags.state';
 
 export class NoFeatureFlagForGuard extends Error {

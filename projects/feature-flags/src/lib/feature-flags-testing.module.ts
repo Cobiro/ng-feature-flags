@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {FeatureFlagsState} from './core/application/feature-flags.state';
 import {FeatureFlagsStateStub} from './core/application/feature-flags.state.stub';
 

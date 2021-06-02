@@ -1,8 +1,8 @@
-import { Client, createInstance, setLogLevel } from '@optimizely/optimizely-sdk';
-import { InjectionToken } from '@angular/core';
-import { EnvConfig } from '../../../../../../../projects/cobiro-core/src/lib/env-config.service';
-import { environment } from '../../../../../../../environments/environment';
-import { LogLevel } from '@optimizely/js-sdk-logging';
+import {Client, createInstance, setLogLevel} from '@optimizely/optimizely-sdk';
+import {InjectionToken} from '@angular/core';
+import {EnvConfig} from '../../../../../../../projects/cobiro-core/src/lib/env-config.service';
+import {environment} from '../../../../../../../environments/environment';
+import {LogLevel} from '@optimizely/js-sdk-logging';
 
 export const optimizelyFactoryProvider = (envConfig: EnvConfig): Client => {
   setLogLevel(environment.production ? LogLevel.ERROR : LogLevel.INFO);

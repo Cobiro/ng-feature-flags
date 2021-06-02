@@ -1,10 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component } from '@angular/core';
-import { By } from '@angular/platform-browser';
-import { of } from 'rxjs';
-import { CoreFeatureFlagsModule } from '@app.cobiro.com/core/feature-flags';
-import { FeatureFlagsState } from '../application/feature-flags.state';
-import { GetsFeatureFlagsStub } from '../domain/gets-feature-flags.stub';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {Component} from '@angular/core';
+import {By} from '@angular/platform-browser';
+import {CoreFeatureFlagsModule} from '@app.cobiro.com/core/feature-flags';
+import {FeatureFlagsState} from '../application/feature-flags.state';
+import {GetsFeatureFlagsStub} from '../domain/gets-feature-flags.stub';
 
 describe('FeatureFlagDirective', () => {
   let fixture: ComponentFixture<TestAppComponent>;

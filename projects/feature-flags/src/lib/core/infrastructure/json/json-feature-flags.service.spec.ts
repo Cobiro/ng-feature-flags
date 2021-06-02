@@ -1,11 +1,7 @@
-import { TestBed } from '@angular/core/testing';
-import {
-  JSON_FEATURE_FLAG_URL,
-  JsonFeatureFlagsService,
-  jsonFeatureFlagsServiceFactory,
-} from './json-feature-flags.service';
-import { HttpClient } from '@angular/common/http';
-import { of } from 'rxjs';
+import {TestBed} from '@angular/core/testing';
+import {JSON_FEATURE_FLAG_URL, JsonFeatureFlagsService, jsonFeatureFlagsServiceFactory,} from './json-feature-flags.service';
+import {HttpClient} from '@angular/common/http';
+import {of} from 'rxjs';
 
 describe('JsonFeatureFlagsService`', () => {
   let service: JsonFeatureFlagsService;

@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { GetsFeatureFlags } from './gets-feature.flags';
+import {of} from 'rxjs';
+import {GetsFeatureFlags} from './gets-feature.flags';
 
 export class GetsFeatureFlagsStub implements GetsFeatureFlags {
   getAll() {

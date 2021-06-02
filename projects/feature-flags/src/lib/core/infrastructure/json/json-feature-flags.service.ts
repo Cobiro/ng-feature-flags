@@ -1,26 +1,22 @@
-import { Inject, Injectable, InjectionToken } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { GetsFeatureFlags } from '../../domain/gets-feature.flags';
-import { HttpClient } from '@angular/common/http';
+import {Inject, Injectable, InjectionToken} from '@angular/core';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {HttpClient} from '@angular/common/http';
+import {GetsFeatureFlags, UserContext} from '../../application/gets-feature.flags';
 
 @Injectable()
 export class JsonFeatureFlagsService implements GetsFeatureFlags {
   constructor(
-    private _httpClient: HttpClient,
-    @Inject(JSON_FEATURE_FLAG_URL) private _url: string,
+    private httpClient: HttpClient,
+    @Inject(JSON_FEATURE_FLAG_URL) private url: string,
   ) {}
 
-  getAll(): Observable<Set<string>> {
-    return this._httpClient.get(this._url).pipe(
-      map(json => {
-        return new Set(Object.keys(json).filter(key => json[key]));
+  getAll(userContext: UserContext): Observable<Set<string>> {
+    return this.httpClient.get(this.url).pipe(
+      map((response: {data: string[]}) => {
+        return new Set(response.data);
       }),
     );
   }
 }
 export const JSON_FEATURE_FLAG_URL = new InjectionToken<string>('JSON_FEATURE_FLAG_URL');
-
-export const jsonFeatureFlagsServiceFactory = (client: HttpClient, url: string) => {
-  return new JsonFeatureFlagsService(client, url);
-};

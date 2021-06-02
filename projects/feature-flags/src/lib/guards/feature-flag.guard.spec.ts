@@ -1,9 +1,9 @@
-import { FeatureFlagGuard, NoFeatureFlagForGuard } from './feature-flag.guard';
-import { TestBed } from '@angular/core/testing';
-import { ActivatedRouteSnapshot, Data, Router, UrlTree } from '@angular/router';
-import { FeatureFlagsState } from '../application/feature-flags.state';
-import { FeaatureFlagsTestingModule } from '../feature-flags-testing.module';
-import { of } from 'rxjs';
+import {FeatureFlagGuard} from './feature-flag.guard';
+import {TestBed} from '@angular/core/testing';
+import {ActivatedRouteSnapshot, Data, Router, UrlTree} from '@angular/router';
+import {FeatureFlagsState} from '../application/feature-flags.state';
+import {FeaatureFlagsTestingModule} from '../feature-flags-testing.module';
+import {of} from 'rxjs';
 
 describe('FeatureFlagGuard', () => {
   let guard: FeatureFlagGuard;

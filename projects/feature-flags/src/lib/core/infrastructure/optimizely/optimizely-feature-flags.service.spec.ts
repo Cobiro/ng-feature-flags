@@ -1,11 +1,8 @@
-import { TestBed } from '@angular/core/testing';
-import {
-  OptimizelyFeatureFlagsService,
-  optimizelyFeatureFlagsServiceFactory,
-} from './optimizely-feature-flags.service';
-import { OPTIMIZELY_CLIENT } from './optimizely-factory-provider';
-import { GETS_OPTIMIZELY_USER_CONTEXT, OptimizelyUserContext } from './optimizely-user-context';
-import { of } from 'rxjs';
+import {TestBed} from '@angular/core/testing';
+import {OptimizelyFeatureFlagsService, optimizelyFeatureFlagsServiceFactory,} from './optimizely-feature-flags.service';
+import {OPTIMIZELY_CLIENT} from './optimizely-factory-provider';
+import {GETS_OPTIMIZELY_USER_CONTEXT, OptimizelyUserContext} from './optimizely-user-context';
+import {of} from 'rxjs';
 
 describe('OptimizelyFeatureFlagsService`', () => {
   let service: OptimizelyFeatureFlagsService;
